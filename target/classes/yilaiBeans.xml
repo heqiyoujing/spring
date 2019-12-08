@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- dao bean和 db bean 没有任何关系
+    	spring 实例化bean的顺序为<bean>配置的顺序，默认先初始化dao，再初始化db
+    	depends-on 用于修改初始化顺序
+    -->
+    <bean id="dao" class="com.example.demo.spring.beanRelationship.Daos" depends-on="db">
+    </bean>
+    <bean id="db" class="com.example.demo.spring.beanRelationship.DataBase">
+    </bean>
+
+</beans>

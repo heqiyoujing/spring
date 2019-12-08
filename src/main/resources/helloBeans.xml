@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="helloService" class="com.example.demo.spring.HelloService">
+        <!--通过spring容器，给HelloService类的info属性注入“传智播客”-->
+        <property name="info" value="传智播客"></property>
+    </bean>
+</beans>

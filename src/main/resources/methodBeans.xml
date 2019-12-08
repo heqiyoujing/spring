@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 不修改UserService原有代码的前提下，扩展service -->
+    <bean id="methodUserService" class="com.example.demo.spring.functionSetter.UserServices">
+        <lookup-method name="getDao" bean="methodOracleDao"/>
+    </bean>
+    <bean id="methodOracleDao" class="com.example.demo.spring.functionSetter.UserOracleDao"></bean>
+
+</beans>

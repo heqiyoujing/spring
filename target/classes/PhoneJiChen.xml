@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 第一种方法：创建两个Bean -->
+    <bean id="user1" class="com.example.demo.spring.beanRelationship.PhoneJiChen">
+        <property name="username" value="jack"></property>
+        <property name="age" value="18"></property>
+    </bean>
+    <bean id="user2" class="com.example.demo.spring.beanRelationship.PhoneJiChen">
+        <property name="username" value="rose"></property>
+        <property name="age" value="18"></property>
+    </bean>
+
+    <!-- 第二种方法：继承，将公共部分提取 -->
+    <bean id="baseUser" class="com.example.demo.spring.beanRelationship.PhoneJiChen" abstract="true">
+        <property name="age" value="20"></property>
+    </bean>
+    <bean id="user3" parent="baseUser">
+        <property name="username" value="jack2"></property>
+    </bean>
+    <bean id="user4" parent="baseUser">
+        <property name="username" value="rose2"></property>
+    </bean>
+</beans>

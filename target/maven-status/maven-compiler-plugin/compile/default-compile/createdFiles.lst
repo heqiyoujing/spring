@@ -1,0 +1,8 @@
+com\example\demo\controller\HelloController.class
+com\example\demo\httpClient\HttpDeleteWithBody.class
+com\example\demo\httpClient\HttpResponse.class
+com\example\demo\httpClient\HttpUtil.class
+com\example\demo\HelloApplication.class
+com\example\demo\entity\Rabbit.class
+com\example\demo\test.class
+com\example\demo\httpClient\HttpRequest.class

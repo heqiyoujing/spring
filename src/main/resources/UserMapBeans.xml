@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookId" class="com.example.demo.spring.jiHe.Book"></bean>
+
+    <bean id="user" class="com.example.demo.spring.jiHe.UserMap">
+        <property name="data">
+            <map>
+                <!-- 第一种写法 -->
+                <entry key="b001" value-ref="bookId">
+                </entry>
+
+                <!-- 第二种写法 -->
+                <entry>
+                    <key >
+                        <value>b002</value>
+                    </key>
+                    <ref bean="bookId"/>
+                </entry>
+            </map>
+        </property>
+
+    </bean>
+</beans>
